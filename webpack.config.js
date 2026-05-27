@@ -47,6 +47,10 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./AdminApp": "./src/AdminApp.js",
+        "./AdminMenu": "./src/components/AdminMenu.jsx",
+      },
+      remotes: {
+        mfeAuth: "mfeAuth@http://localhost:4201/remoteEntry.js",
       },
       shared: {
         react: { singleton: true, requiredVersion: false },
